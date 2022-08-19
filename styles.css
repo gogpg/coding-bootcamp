@@ -8,10 +8,20 @@ header {
 .about-me {
     background-color: rgb(180, 180, 61, 0.5);
     width: 300px;
-    height: 50px; 
+    height: 150px; 
     margin: 10px;
     border: solid black 10px;
     border-radius: 15px;
+}
+
+#name {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.my_picture {
+    width: 100px;
+    border-radius: 50px;
+    
 }
 
 section {
