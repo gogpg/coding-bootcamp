@@ -46,9 +46,22 @@ display.innerHTML = plays*/
 /// PUSH .push() method. add one or more elements to the end of an array.
 
 
-const plays = ['Hamilton']   
+/*const plays = ['Hamilton']   
 plays.push('Wicked', 'Cats')   //pridedame dar du elementus i originalu masyva, elementai pridedami gale.
 display.innerHTML = plays
+*/
+
+
+// SLICE .slice() method does not mutate arrays, it produces new ones. Remove elements from everywhere i an array.
+
+const artists = ['Shakira', 'Snoop', 'Sia', 'Beyonce', 'Madonna' ]
+
+const maleArtist = artists.slice(1, 2)
+
+console.log(maleArtist)
+console.log(artists)   ///originalus masyvas nepasikeicia, sukuriamas naujas
+
+console.log(artists.slice(1, 2))
 
 
 
