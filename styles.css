@@ -38,6 +38,14 @@ li {
   
 }
 
+.hcolor {
+    /*background-color: grey;*/
+    background-image: repeating-linear-gradient(black,  #ef866c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+}
+
 .hero-image {
     width: 300px;
    /* height: 304px;*/
@@ -49,9 +57,22 @@ li {
 
 .hero-info {
     margin: 30px;
+    justify-content: center;
     max-width: 300px;
 }
 
+@media only screen and (max-width: 800px) {
+    .hero-info {
+        max-width: 700px;
+    }
+    .hero-image{
+        visibility: hidden;
+        height: 0px;
+    }
+    section {
+        padding: 20px 0 0 0;
+    }
+}
 .styled-break {
     width: 30px;
     height: 5px;
@@ -123,8 +144,7 @@ section {
    /* background-color: green;*/
     flex-wrap: wrap;
     padding: 40px 0 0 0;
-
-    
+    background-color: #ffffff;
 }
 
 .about-me {
@@ -177,4 +197,8 @@ a:hover {
 
 a:active {
     color: purple;
+}
+
+.fa-regular {
+    margin: 5px;
 }

@@ -34,5 +34,69 @@ body {
     text-align: center;
     font-size: 50px;
     color: brown;
+}
 
+container {
+    background-color: aqua;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    position: relative;
+    z-index: -5;
+}
+
+.one-circle {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    bottom: 50%;
+}
+
+.two-circle {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    position: absolute;
+    z-index: -1;
+    bottom: 40%;
+}
+
+.three-circle {
+    border-radius: 50px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    z-index: -2;
+    bottom: 30%;
+}
+
+.four-circle {
+    border-radius: 50px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    z-index: -3;
+    bottom: 20%;
+}
+
+.five-circle {
+    border-radius: 50px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: absolute;
+    z-index: -4;
+    bottom: 10%;
 }
