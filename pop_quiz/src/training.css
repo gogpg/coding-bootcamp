@@ -1,0 +1,57 @@
+.container {
+    height: 400px;
+    padding: 50px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.face {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: cornsilk;
+    position: absolute;
+}
+
+.eye-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 50px;
+     padding-left: 40px;
+     padding-right: 40px;
+}
+
+.eye {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+ 
+}
+
+.eyeballs {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.balls-place {
+  height: 100px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.balls {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: brown;
+  margin: 20px;
+}
+
