@@ -15,7 +15,7 @@
 
 // //// 2 PRATIMAS // padaryti for cikla, kuris generuotu auksciau esanciam pratimui skaicius iki 100.
 
-// for (i = 1; i < 101; i++) {
+// for (let i = 1; i < 101; i++) {
 
 //     if (i % 15 == 0) {              
 //         console.log(i + 'fizz buzz')
@@ -147,7 +147,7 @@
     bob.style.left = count + 'px'  // prie count prisideda 'px'
  }
 
-bob.addEventListener('click', moveBob)
+bob.addEventListener('click', moveBob)  //prie bob kintamojo pridedu event listeneri click, kad paspaudus bob sureaguotu, salia funkcijos aktyvavimas, kokios reakcijos paspaudus norime.
 
 // const moveBob = () => {        /// kitas funkcijos uzrasymo budas.
 //     count += 50
@@ -161,7 +161,7 @@ let i = 1;
 
 while(i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. parasys console 9 kartus nurodyta uzrasa
     console.log(i + ' beers on the wall')  //jeigu parasysiu tik sita viena eilute, mano console uzlus, nes ciklas suskasi be gali, neis i visada yra mazesnis uz 10, jis yra nulis
-    i++                         //todel turiu parasyti sita veiksma, kad kiekviena karta i prisipliusuotu, kol pasieks desimt
+    i++                         //todel turiu parasyti sita veiksma, kad kiekviena karta i prisipliusuotu, kol pasieks desimt ir ciklas sustos, nes kitaip i visada 1 ir ciklas sukasi be galo.
 }
 //sis ciklas yra pavojingas del galimu klaidu rasant koda ir begalinio jo sukimosi, geriau nenaudoti.
 
@@ -173,7 +173,9 @@ while(i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. par
 // Array
 // Object
 
-// Length -----------------------------------------------------------
+//visi sie built-in objektai turi metodus ir properties.
+
+// Length yra JS propertie, gali buti naudojamas su stringu arba masyvu  -----------------------------------------------------------
 
 const balls = document.querySelectorAll('.balls')  // paimame visus div, kurie pazymeti .balls klase. parase zodi All renkantis elementus, mes gauname visus, kurie yra pazymeti sita klase
 console.log(balls)  //prie info console rodys ilgi, kiek yra tokiu elementu
@@ -182,14 +184,14 @@ console.log(balls.length)/// taip galima irgi paziureti, tada duos tik skaiciu c
 //array.length
 //string.legth and so on
 
-// .Concat() ---------------------------------------------------------------
+// .Concat() metodas galime sujungti stringus ir masyvus ---------------------------------------------------------------
 
 const stringWord = 'Say cheese, '
 const stringName = 'Elena.'
 
 console.log(stringWord.concat(stringName))  //du stringai sujungiami i viena
 
-//sujungiat du masyvus, concat metodas nekeicia originaliu masyvu, jis padaro visai nauja atskira masyva sujungdamas juos.
+//sujungiant du masyvus, concat metodas nekeicia originaliu masyvu, jis padaro visai nauja atskira masyva sujungdamas juos.
 
 const array1 = [1, 2, 3, 4, 5]
 const array2 = [6, 7, 8, 9, 10]
@@ -200,7 +202,49 @@ console.log(array2)
 console.log(array3)
 console.log(newArray)
 
-// .Join() --------------------------------------------------------------------
+// .join() ---------------------------------------------------------------------------------------------------------------------------------------
+//grazina nauja stringa, sujungdamas visus elementus masyve.
+
+const textDisplay = document.querySelector('.text')  //issitraukiame html elementa pagal klase.
+
+const emotions = ['Happy', 'Sad', 'Confident'];
+
+// emotions.join()  //ekrane rezultatas tas pats, bet consolej paziurejus gauname jau nebe masyva, o sringa
+// console.log(emotions.join(''))  ///irasius tuscia stringa gausime viena stringa is masyvo be kableliu, reiskia kableliai buvo pakeisti niekuo.
+// console.log(emotions.join(' '))  //stringai is masyvo jungiasi per tuscia tarpa.
+// console.log(emotions.join('-'))  //cia kableliai jau pakeiciami bruksneliais, stringai jungiasi per bruksnelius ir tt galima irasyti ka norim.
+  
+const newString = emotions.join(' ')   //reikia naujo kintamojo,, nes sis metodas grazina kazka naujo, kuri reikia kur nors ideti (i kintamaji), kitaip neveiks.
+textDisplay.innerHTML = newString;    ///su inner html issitrauke i js html elementa jame galime irasyti ka reikia ir tai atsivaizduos html.
+
+// .pop() --------------------------------------------------------------------------------------------------------------------------------
+/// istrina paskutini elementa is masyvo ir ji grazina. Metodas keicia masyvo ilgi, pakeicia masyva.
+
+const display = document.querySelector('.display');
+
+// const movies = ['Terminator', 'Aliens', 'Argo'];
+
+// movies.pop()  ///masyvas grazinamas be paskutinio elemento
+
+const movies = [
+    {
+
+    },
+    {
+        
+    },
+    {
+        
+    }
+
+]
+
+display.innerHTML = movies;
+
+
+
+
+
 
 
 
