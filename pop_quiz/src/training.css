@@ -1,43 +1,42 @@
 .container {
-    height: 400px;
-    padding: 50px;
-    background-color: aquamarine;
-    position: relative;
+  height: 400px;
+  padding: 50px;
+  background-color: aquamarine;
+  position: relative;
 }
 
 .face {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: cornsilk;
-    position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: cornsilk;
+  position: absolute;
 }
 
 .eye-container {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     padding-top: 50px;
-     padding-left: 40px;
-     padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .eye {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: right;
-    align-items: center;
- 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .eyeballs {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
 }
 
 .balls-place {
@@ -71,7 +70,7 @@
 
 .display {
   width: 70%;
-  height: 200px;
+  height: 50px;
   background-color: aqua;
   border: solid black 20px;
   margin: 30px 0;
@@ -80,4 +79,114 @@
   padding: 20px;
   font-size: 30px;
 }
+
+.flowers-area {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+}
+
+.circles {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flowers {
+  width: 110px;
+  height: 35px;
+  background-color: hotpink;
+  border-radius: 50px;
+}
+
+.flowers::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 110px;
+  height: 35px;
+  background-color: hotpink;
+  border-radius: 50px;
+  transform: rotate(60deg);
+}
+
+.flowers::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 35px;
+  background-color: hotpink;
+  border-radius: 50px;
+  transform: rotate(-60deg);
+}
+
+.hearts-place {
+  background-color: hotpink;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.heart{
+  width: 90px;
+  height: 90px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  position: relative;
+  background: red;
+  margin: 40px ;
+}
+.heart::before, .heart::after{
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: red;
+}
+.heart::before{
+  left: -50px;
+}
+.heart::after{
+  top: -50px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 10px
+}
+
+.circ-place {
+  height: 150px;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circ {
+  width: 0px;
+  height: 0px;
+  border-radius: 50px;
+  border: 50px solid darkblue;
+  border-top-color: transparent;
+  transform: rotate(80deg);
+  margin: 20px;
+}
+
+
 

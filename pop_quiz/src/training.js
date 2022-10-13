@@ -1,4 +1,4 @@
- 
+
 // //// 1 PRATIMAS /////// jei skaicius dalinasi is triju console.log fizz, jei is 5 buzz, jei is penkiolikos fizz buzz, jei niekur netinka, tego konsoleje paraso ta skaiciu.
 
 // let x = 5;
@@ -28,17 +28,17 @@
 //     }
 // }
 
-// ////////// MASYVAI ////////////////////////////////////////////////
+// ////////// MASYVAI ///////////////////////////////////////////////////////////////////////////////////////
 
 // let books = ['Sapiens', 'Moby Dick', 'Life of Pi', 'Sapiens', 'Dictionary', 'Sapiens']
 
 // //console.log isvardinti visas knygas
 
-// for (i = 0; i < books.length; i++) {
+// for (let i = 0; i < books.length; i++) {
 //     console.log(books[i])
 // }
 
-// ///paskaiciuoti kiek yra 'Sapiens' knygu.
+// ///paskaiciuoti kiek yra 'Sapiens' knygu.-----------------------------------------------------------
 
 // let count = 0;
 // for (i = 0; i < books.length; i++) {
@@ -48,7 +48,7 @@
 //     }
 // }
 
-// //////// OBJECTS ///////////////////////////////////////////////////////
+// //////// OBJECTS /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // const user = {
 //     name: 'Jonas',
@@ -61,7 +61,7 @@
 // console.log(user.name)
 // console.log('age: ' + user.age)
 
-// //////// OBJECTS IN ARRAYS /////////////////////////////////////////////////////
+// //////// OBJECTS IN ARRAYS //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // const mediaStars = [
 //     {
@@ -134,18 +134,18 @@
 
 // /////////// PRATIMAS ////////////////////////////
 
- const bob = document.querySelector('.face')
+const bob = document.querySelector('.face')
 
- let count = 0;
+let count = 0;
 
- function moveBob() {
+function moveBob() {
     //console.log('hi')  // paziuriu ar veikia funkcija paklikinus ant paveiksliuko. ar veikia eventlistener.
 
     //bob.style.left = '100px'  //paspaudus ant paveiksliuko jis pasislenka nuo kaires i desine 100 px.
 
     count = count + 50;   //kitaip galima uzrasyti count += 50; kiekviena karta paspaudus ant paveikslelio, prie count prisideda po 50 
     bob.style.left = count + 'px'  // prie count prisideda 'px'
- }
+}
 
 bob.addEventListener('click', moveBob)  //prie bob kintamojo pridedu event listeneri click, kad paspaudus bob sureaguotu, salia funkcijos aktyvavimas, kokios reakcijos paspaudus norime.
 
@@ -159,13 +159,13 @@ bob.addEventListener('click', moveBob)  //prie bob kintamojo pridedu event liste
 
 let i = 1;
 
-while(i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. parasys console 9 kartus nurodyta uzrasa
+while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. parasys console 9 kartus nurodyta uzrasa
     console.log(i + ' beers on the wall')  //jeigu parasysiu tik sita viena eilute, mano console uzlus, nes ciklas suskasi be gali, neis i visada yra mazesnis uz 10, jis yra nulis
     i++                         //todel turiu parasyti sita veiksma, kad kiekviena karta i prisipliusuotu, kol pasieks desimt ir ciklas sustos, nes kitaip i visada 1 ir ciklas sukasi be galo.
 }
 //sis ciklas yra pavojingas del galimu klaidu rasant koda ir begalinio jo sukimosi, geriau nenaudoti.
 
-////////////// BUILT-IN OBJECTS /////////////////////////////////////////////////////////////////////////////
+////////////// BUILT-IN OBJECTS /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Date
 // Math
@@ -177,69 +177,222 @@ while(i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. par
 
 // Length yra JS propertie, gali buti naudojamas su stringu arba masyvu  -----------------------------------------------------------
 
-const balls = document.querySelectorAll('.balls')  // paimame visus div, kurie pazymeti .balls klase. parase zodi All renkantis elementus, mes gauname visus, kurie yra pazymeti sita klase
-console.log(balls)  //prie info console rodys ilgi, kiek yra tokiu elementu
-console.log(balls.length)/// taip galima irgi paziureti, tada duos tik skaiciu console, pirmas variantas informatyvesnis.
+        const balls = document.querySelectorAll('.balls')  // paimame visus div, kurie pazymeti .balls klase. parase zodi All renkantis elementus, mes gauname visus, kurie yra pazymeti sita klase
+        console.log(balls)  //prie info console rodys ilgi, kiek yra tokiu elementu
+        console.log(balls.length)/// taip galima irgi paziureti, tada duos tik skaiciu console, pirmas variantas informatyvesnis.
 
-//array.length
-//string.legth and so on
+        //array.length
+        //string.legth and so on
 
-// .Concat() metodas galime sujungti stringus ir masyvus ---------------------------------------------------------------
+// .concat() metodas galime sujungti stringus ir masyvus ---------------------------------------------------------------
 
-const stringWord = 'Say cheese, '
-const stringName = 'Elena.'
+        const stringWord = 'Say cheese, '
+        const stringName = 'Elena.'
 
-console.log(stringWord.concat(stringName))  //du stringai sujungiami i viena
+        console.log(stringWord.concat(stringName))  //du stringai sujungiami i viena
 
-//sujungiant du masyvus, concat metodas nekeicia originaliu masyvu, jis padaro visai nauja atskira masyva sujungdamas juos.
+        //sujungiant du masyvus, concat metodas nekeicia originaliu masyvu, jis padaro visai nauja atskira masyva sujungdamas juos.
 
-const array1 = [1, 2, 3, 4, 5]
-const array2 = [6, 7, 8, 9, 10]
-const array3 = [11, 12, 13, 14, 15]
-const newArray = array1.concat(array2, array3)
-console.log(array1)
-console.log(array2)
-console.log(array3)
-console.log(newArray)
+        const array1 = [1, 2, 3, 4, 5]
+        const array2 = [6, 7, 8, 9, 10]
+        const array3 = [11, 12, 13, 14, 15]
+        const newArray = array1.concat(array2, array3)
+        console.log(array1)
+        console.log(array2)
+        console.log(array3)
+        console.log(newArray)
 
 // .join() ---------------------------------------------------------------------------------------------------------------------------------------
 //grazina nauja stringa, sujungdamas visus elementus masyve.
 
-const textDisplay = document.querySelector('.text')  //issitraukiame html elementa pagal klase.
+        const textDisplay = document.querySelector('.text')  //issitraukiame html elementa pagal klase.
 
-const emotions = ['Happy', 'Sad', 'Confident'];
+        const emotions = ['Happy', 'Sad', 'Confident'];
 
-// emotions.join()  //ekrane rezultatas tas pats, bet consolej paziurejus gauname jau nebe masyva, o sringa
-// console.log(emotions.join(''))  ///irasius tuscia stringa gausime viena stringa is masyvo be kableliu, reiskia kableliai buvo pakeisti niekuo.
-// console.log(emotions.join(' '))  //stringai is masyvo jungiasi per tuscia tarpa.
-// console.log(emotions.join('-'))  //cia kableliai jau pakeiciami bruksneliais, stringai jungiasi per bruksnelius ir tt galima irasyti ka norim.
-  
-const newString = emotions.join(' ')   //reikia naujo kintamojo,, nes sis metodas grazina kazka naujo, kuri reikia kur nors ideti (i kintamaji), kitaip neveiks.
-textDisplay.innerHTML = newString;    ///su inner html issitrauke i js html elementa jame galime irasyti ka reikia ir tai atsivaizduos html.
+        // emotions.join()  //ekrane rezultatas tas pats, bet consolej paziurejus gauname jau nebe masyva, o sringa
+        // console.log(emotions.join(''))  ///irasius tuscia stringa gausime viena stringa is masyvo be kableliu, reiskia kableliai buvo pakeisti niekuo.
+        // console.log(emotions.join(' '))  //stringai is masyvo jungiasi per tuscia tarpa.
+        // console.log(emotions.join('-'))  //cia kableliai jau pakeiciami bruksneliais, stringai jungiasi per bruksnelius ir tt galima irasyti ka norim.
+
+        const newString = emotions.join(' ')   //reikia naujo kintamojo,, nes sis metodas grazina kazka naujo, kuri reikia kur nors ideti (i kintamaji), kitaip neveiks.
+        textDisplay.innerHTML = newString;    ///su inner html issitrauke i js html elementa jame galime irasyti ka reikia ir tai atsivaizduos html.
 
 // .pop() --------------------------------------------------------------------------------------------------------------------------------
-/// istrina paskutini elementa is masyvo ir ji grazina. Metodas keicia masyvo ilgi, pakeicia masyva.
+/// istrina paskutini elementa is masyvo ir ji grazina. Metodas keicia masyvo ilgi, pakeicia masyva, jis nesukuria naujo masyvo.
 
-const display = document.querySelector('.display');
+        //const display = document.querySelector('.display');
 
-// const movies = ['Terminator', 'Aliens', 'Argo'];
+        //const movies = ['Terminator', 'Aliens', 'Argo'];
 
-// movies.pop()  ///masyvas grazinamas be paskutinio elemento
+        // movies.pop()  ///masyvas grazinamas be paskutinio elemento
 
-const movies = [
-    {
+        // const movies = [
+        //     {
+        //         name: 'Argo',
+        //         length: '136'
+        //     },
+        //     {
+        //         name: 'Terminator',
+        //         length: '200'
+        //     },
+        //     {
+        //         name: 'Aliens',
+        //         length: '205'
+        //     }
 
-    },
-    {
+        // ]
+
+        //  console.log(movies)
+
+        //  movies.pop()   //is masyvo isimamas paskutinis elementas (paskutinis objektas), masyvas pakeiciamas (jo ilgis)
+
+        //  console.log(movies)
+
+        // display.innerHTML = movies;
+
+// .shift() metodas -------------------------------------------------------------------------------------------------------------------
+//pasalina pirma masyvo elementa, pakeicia masyvo ilgi. Naujo masyvo nesukuria.
+
+        // const display = document.querySelector('.display');
+        // const movies2 = ['It', 'Run', 'Pasadena']
+        // movies2.shift()
+
+        // display.innerHTML = movies2;
+
+// .unshift() metodas -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// prideda viena ar kelis elementus i masyvo pradzia ir grazina pakeista originalu masyva. pakeicia jo ilgi.
+
+        // const display = document.querySelector('.display');
+
+        // const plays = ['Hamilton']
+        // plays.unshift('Wicked', 'Cats')  ///pridedame naujus elementus i masyvo pradzia
+        // display.innerHTML = plays;
+
+// .push() metodas -----------------------------------------------------------------------------------------------------------------------
+/// prideda viena ar daugiau elementu i masyvo gala. Pakeicia originalu masyva, jo ilgi.
+
+        // const display = document.querySelector('.display');
+
+        // const plays = ['Hamilton']
+        // plays.push('Wicked', 'Cats')  ///pridedame naujus elementus i masyvo gala.
+        // display.innerHTML = plays;
+
+// .slice() metodas -----------------------------------------------------------------------------------------------------------------
+//metodas nekeicia originalaus masyvo, jis grazina nauja masyva, todel reikia ji ideti i nauja kintamaji, kad veiktu. Isima is seno masyvo nurodytus elementus pagal indeksus nurodytus prazios ir pabaigos ir grazina nauja masyva su tais isimtais elementais.
+        // const display = document.querySelector('.display');
+
+        // const plays = ['Hamilton', 'Wicked', 'Cats', 'Mona Liza', 'Mia']
+        // //const newPlays = plays.slice(1, 4) //pazymiu pradzia nuo kurios reikia isimti elementus ir gala iki kur.
+        // const newPlays = plays.slice(2)  //pazymiu tik pradzia nuo kurios reikia isismti elementus, jei nepazymiu galo, tada isims visus nuo tos prazios. visus elementus esancius gale.
+
+        // display.innerHTML = newPlays;
+
+// .splice() metodas --------------------------------------------------------------------------------------------------------------------------
+// pakeicia originalu masyva istrinant senus elementus ir pridedant naujus elementus i ju vieta.
+
+        const display = document.querySelector('.display');
+
+        const plays = ['Hamilton', 'Wicked', 'Cats', 'Mona Liza', 'Mia']
+        //plays.splice(1, 1)  ///parasau indeksa elemento, kuri noriu istrinti is originalaus masyvo. Pradzia ir gala, jei noriu istrinti tik viena, tada parasau ta indeksa du kartus. Jei kelis, tada pvz, 1, 3 pradzia vienas, galas trys.
+        //plays.splice(1) //istrins is masyvo visus elementus nuo 1 indekso, liks tiks Hamilton
+        //plays.splice(1, 3) //istrins elementus nuo pirmo iki 3 indekso, liks hamilton 0 indekso elementas ir Mia ketvirto indekso elementas.
+        //plays.splice(1,1, 'Mulan') //istrinu pirmo indekso elementa Wicked, vietoj jo irasau nauja reiksme "Mulan"
+        //plays.splice(1, 3, 'Bla', 'La', '2') //istrinu elementus nuo 1 iki 3 indekso, vietoj ju irasau naujas reiksmes.
+
+        plays.splice(1, 0, 'Hook') //sitame variante as nieko neistrinu, nurodau, nuo kurio elemento nieko neistrynusi,(antras skaicius nurodo kiek noriu istrinti elementu, ju kieki, jei 0 tada kiekio nera, reiskia as istrinti nieko nenoriu) noriu ideti nauja elementa 'Hook'
+        //// taisykle: let splicedArray = array.splice(start, deleteCount, replacement)
+        display.innerHTML = plays;
+
+// .forEach() metodas, ciklas------------------------------------------------------------------------------------------------------------------------------
+///aktyvuoja nurodyta funkcija viena karta kiekveinam elementui masyve.
+
+        // const circles = document.querySelectorAll('.circles');   //istraukiu visus elementus, kuriu klase yra .circles
+        // console.log(circles)  //matome tris apskritimus, node list masyve consolej. 
+        // circles.forEach(item => item.style.backgroundColor = 'green')
+
+        const names = ['Emilija', 'Vaidotas', 'Giedre', 'Jokubas', 'Zita']
+
+        names.forEach(item => console.log(item))
+
+        const numbers = [1, 2, 3, 4]
+
+        numbers.forEach(number => {
+            console.log(number + 1)
+        })
+
+// .some() metodas.-------------------------------------------------------------------------------------------------------------------------------------------
+//ieskome ar nors vienas elementas masyve atitinka parasyta salyga. atsakymai true arba false.
+
+        const scores = [23, 56, 76, 59]
+        console.log(scores.some(item => item > 50))  //suranda masyve ar yra skaicius nors vienas, kuris yra didesnis nei 50, atsakymas true, arba false. siuo atveju true, nes masyve yra keli skaiciai didesni uz 50.
+
+        const countries = ['Lithuania', 'Latvia', 'Poland', 'South America']
+        console.log(countries.some(country => country === 'Poland'))  //randame ar masyve yra salis Poland, atsakymas true, nes yra.
+
+        //--
+
+        const hearts = Array.from(document.querySelectorAll('.heart'))  //padarome masyva is sirdeliu node listo, Array.from() metodo pagalba.
+        console.log(hearts)  //gaunu nodes list sirdeliu consolej. Masyvas.
+        const isHeartBroken = hearts.some(heart => heart.hasChildNodes())  //patikriname ar tame masyve yra heart divas turintis savyje kita diva (dot), tikriname su hasChildNode() irankiu, kuris iesko Node masyve.
+        console.log(isHeartBroken)  //atsakymas true, nes viename is sirdeliu divu yra kitas child elementas - dot divas.
+
+// .map metodas-ciklas ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// sukuria nauja masyva, tuo skiriasi nuo forEach metodo. Kiekvienam masyvo elementui pritaiko nurodyta funkcija ar veiksma ir sukuria nauja masyva.
+
+        const ages = [21, 45, 56, 32, 45, 2]
+        const newAges = ages.map(age => age + 3)  //sukuriame nauja masyva, kuriame prie visu seniau esanciu masyvo skaiciu pridedama po 3
+        console.log(newAges)
+
+        //--
+
+        const housmates = [
+            {
+              name: 'Ahmed',
+              age: 24
+            },
+            {
+              name: 'Ellen',
+              age: 45
+            },
+            {
+              name: 'Jon',
+              age: 24 
+            }
+        ]
+
+        const housmatesAfterDecade = housmates.map(object => object.age + 10)
+        console.log(housmatesAfterDecade)
+
+        //--
+
+/// .filter() metodas ---------------------------------------------------------------------------------------------------------------------------
+
         
-    },
-    {
+
         
-    }
+        
 
-]
 
-display.innerHTML = movies;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
