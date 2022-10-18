@@ -188,5 +188,23 @@
   margin: 20px;
 }
 
+.blue {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
+
+.pink {
+  width: 70%;
+  height: 100px;
+  background-color: palevioletred;
+  border: solid violet 10px;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
 
 

@@ -366,6 +366,100 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
         //--
 
 /// .filter() metodas ---------------------------------------------------------------------------------------------------------------------------
+//metodas sukuria nauja masyva, nekeicia senojo, reikia deti i nauja kintamaji.
+
+        // const shows = ['Lupin', 'Cobra Kai', '24', 'Mr.Robot']
+        // const showsWithMoreThenFiveLetters = shows.filter((word) => word.length > 5) //imam masyva, filtruoja, imam atskira itema masyve, tikrinam jo ilgi, jei salyga atitinka, naujame masyve, naujoje konstantoje visi tie zodziai ir atsiranda.
+        // console.log(showsWithMoreThenFiveLetters)
+        // const pinkDisplay = document.querySelector('.pink')
+        // pinkDisplay.innerHTML = showsWithMoreThenFiveLetters
+
+        //--
+
+        // const shows = [
+        //         {
+        //                 name: 'Lupin',
+        //                 series: 1,
+        //                 episodes: 5
+        //         },
+        //         {
+        //                 name: 'Cobra Kai',
+        //                 series: 3,
+        //                 episodes: 20
+        //         },
+        //         {
+        //                 name: '24',
+        //                 series: 5,
+        //                 episodes: 50
+        //         },
+        //         {
+        //                 name: 'Mr.Robot',
+        //                 series: 3,
+        //                 episodes: 24
+        //         }
+        // ]
+
+        // const pinkDisplay = document.querySelector('.pink')
+
+        // const filteredShows = shows.filter((show) => show.episodes <= 20)
+
+        // console.log(filteredShows)
+
+        // //pinkDisplay.innerHTML = stringify(filteredShows);  //nezinau, kaip normaliai iskelti i html
+
+// .reduce() metodas -----------------------------------------------------------------------------------------------------------------------------------------------
+//sudeda masyve esancius skaicius.
+
+        const days = [23, 57, 1]
+
+        /////days.reduce((accumulator, currentValue) => accumulator + currentValue)   // cia reduce funkcijos sintakse
+
+        const total = days.reduce((a, b) => a + b)
+        console.log(total)
+
+// .every() metodas --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// nustato ar kiekvienas itemas masyve atitinka numatyta salyga funkcijoje. Grazina booliena, true arba false.
+
+      const values = [1, 5, 7, 15] 
+      const values1 = values.every((value) => value > 10)
+      console.log(values1)   //grazina false, nes ne visi yra daugiau uz 10.
+
+        //--
+
+      const animals = ['cat', 'dog', 'rat', 'mouse']
+      const isThreeLetterAnimals = animals.every((animal) => animal.length === 3)
+      console.log(isThreeLetterAnimals) // gausime false, nes ne visu zodziu ilgis masyve yra lygus 3;
+
+// .split metodas ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// padalina stringa i numatyta eile stringu. ir juos patalpina i masyva. grazina masyva.
+
+        const sentence = 'I will have what she is having'
+
+        const words = sentence.split(' ')  //padalina stringa per tarpus, kur yra tarpas, ten stringas yra kertamas.
+        console.log(words)  //gauname masyva su atskirais zodziais
+        console.log(words[0])  //dabar galiu rasti ataskirus zodzius masyve, pagal indeksa.
+
+        const letters = sentence.split('') //viska issplitino raidemis, tarpai, taip pat pateko i masyva
+        console.log(letters)
+        console.log(letters[3]) //galiu rasti viena atskira raide masyva, pagal indeksa.
+
+        //--
+
+        const anotherSentence = 'Common baby light my fire'; //istraukti trecia stringo zodi (uzduotis)
+        const anotherSentenceWords = anotherSentence.split(' ')[2]
+        console.log(anotherSentenceWords)
+
+
+
+
+
+
+
+
+       
+
+
+
 
         
 
@@ -387,10 +481,7 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
 
 
 
-
-
-
-
+ 
 
 
 
