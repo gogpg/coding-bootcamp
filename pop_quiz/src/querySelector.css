@@ -1,0 +1,31 @@
+.circle-place {
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.red-circle {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(103, 68, 68);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.firstSquere {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(142, 88, 88);
+    margin: 5px;
+}
