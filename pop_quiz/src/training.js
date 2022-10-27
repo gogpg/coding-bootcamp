@@ -449,6 +449,39 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
         const anotherSentenceWords = anotherSentence.split(' ')[2]
         console.log(anotherSentenceWords)
 
+// DATE ---------------------------------------------------------------------------------------------------------------------------------
+
+const displayForDate = document.querySelector('.date-place')
+
+      const today = new Date()  //rodo visa sios dienos datos informacija
+
+      const dayOfMonth = today.getDate() //gauname kokia siandien diena, istraukiame is today constantos tik menesio diena kokia dabar yra
+      const dayOfWeek = today.getDay() //gauname skaiciu, kokia yra savates diena dabar
+      const year = today.getFullYear() //gauname tik metus
+      const hours = today.getHours() 
+      const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+
+      const isoString = today.toISOString()  //supaprastintas iso datos formatas
+      console.log(isoString)
+      
+      console.log(today)
+      console.log(dayOfMonth)
+      console.log(dayOfWeek)
+      console.log(year)
+      console.log(hours)
+      console.log(time)
+
+//// count down to next Christmas-----------
+
+const christmas = new Date('2022-12-24T11:13:08.010Z')  //nustatau kaledu laika, iki kada bus skaiciuojama, nusikopijavau iso sios dienos formata ir pakeiciau i 12 men 24 d.
+
+const milisecondToChristmas = christmas - today; // is christmas kintamojo atimu today kintamaji, gainame skirtuma milisekundemis
+
+const minutesToChristmas = milisecondToChristmas / 60000; // gauname minutes iki kaledu;
+console.log(minutesToChristmas)
+
+displayForDate.innerHTML = Math.round(minutesToChristmas); // jei be Math.round rasome, tai gaunasi labai ilgas skaicius, nes daug skaiciu po kablelio, todel suapvalinam iki sveiko skaiciaus.
+
 
 
 
