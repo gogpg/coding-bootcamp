@@ -226,4 +226,56 @@
   color: darkblue;
 }
 
+.bubble-place {
+  height: 150px;
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble {
+  position: absolute;
+  background: slategray;
+  padding: 6px 10px;
+  border-radius: 5px 0 5px 5px;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-top: 8px solid slategray;
+  border-right: 12px solid transparent;
+}
+
+/* .bubble {
+      background-color: lightgreen;
+      width: 300px;
+      height: 150px;
+      border-radius: 50px;
+      color: gray;
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+}
+
+.speech {
+    width: 0;
+    height: 0;
+    border-top: 30px solid lightgreen;
+    border-left: 30px solid transparent;
+    margin-left: 220px;
+}
+*/
+
+
+
+
+
 
