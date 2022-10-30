@@ -484,7 +484,7 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
 
   // TIMERS //---------------------------------------------------------------------------------------------------------------------------------
 
-      // setTimeout() ////////------------------
+      // setTimeout() ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
       // setTimeout(function, milliseconds)  // sintakse
 
@@ -508,9 +508,84 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
 
       setTimeout(() => {bubble.style.display = 'none'}, 15000)   //po 15 sekundziu dingsta visas html elementas.
 
+///// SET INTERVAL //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // setInterval(function, milliseconds)   // sintakse
+
+//      const bubble2 = document.querySelector('.bubble2');
+//      const text = 'Alert!';
+//      const actionTime = 2000;
+
+//      function ShowAlert() {
+//         const textDisplay = document.createElement('div')   //sukuriu nauja div elementa
+//         textDisplay.innerHTML = text;                      //div elementui prsikiriu texta
+//         bubble2.appendChild(textDisplay); //div elementa su textu idedu i jau css sukurto bubble2 elemento vidu
+        
+//      }
+
+//      setInterval(ShowAlert, actionTime)    //nustatau intervala, kad kas 2 sekundes aktyvuotu funcija. atsiranda vis naujas divas kas dvi sekundes bubble2 elemente.
 
 
-      
+// uzduotis: kas penkias sekundes turi atsirasti mano vardas ekrane.----------------------------------------------------------
+
+        const bubble2 = document.querySelector('.bubble2');
+        function showMyName() {
+                const myName = document.createElement('span')  //sukuriu nauja elementa span
+                myName.textContent = ' Giedre'                 //jam priskiriu teksta
+                bubble2.appendChild(myName)                    //nauja elementa priskiriu jau esanciam elementui
+               
+
+                
+        }
+
+        const printMyName = setInterval(showMyName, 2000)          //nustatau intervala, kad kvietu funkcija kas 5 sekundes
+        
+        //--CLEAR INTERVAL /////------
+        //clearInterval()
+
+        //-- uzduotis: rutuliukas ekrane turi pajudeti i desine 10 kartu ir sustoti.
+
+// const figure = document.querySelector('.cc')
+// const intervalId = setInterval(moveFigure, 1000)
+// count = 0;
+// function moveFigure() {
+//         if (count === 400) {
+//                 clearInterval(intervalId)
+//         } else{
+//                 count = count + 40
+//                 figure.style.left = count + 'px'
+//         }
+       
+// }
+
+const figure = document.querySelector('.cc')
+
+let leftMove = 0;
+function moveFigure() {
+  leftMove = leftMove + 40     
+  figure.style.left = leftMove + 'px'
+    if (leftMove === 400) {
+        clearInterval(intervalId)
+    }
+}
+
+const intervalId = setInterval(moveFigure, 1000)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
 
 

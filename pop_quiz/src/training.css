@@ -228,7 +228,6 @@
 
 .bubble-place {
   height: 150px;
-  width: 100%;
   background-color: beige;
   display: flex;
   justify-content: center;
@@ -273,6 +272,50 @@
     margin-left: 220px;
 }
 */
+
+.place-bubble {
+  height: 150px;
+  background-color: fuchsia;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble2 {
+  position: absolute;
+  background: lightgreen;
+  padding: 6px 10px;
+  border-radius: 5px 0 5px 5px;
+  color: black;
+  font-size: 10px;
+  text-align: center;
+}
+
+.bubble2:after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-top: 8px solid lightgreen;
+  border-right: 12px solid transparent;
+}
+
+.ccPlace {
+  height: 150px;
+  background-color: black;
+  position: relative;
+
+}
+
+.cc {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 50px;
+  left: 5px;
+}
 
 
 
