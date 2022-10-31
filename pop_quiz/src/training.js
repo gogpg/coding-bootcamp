@@ -529,10 +529,15 @@ while (i < 10) {                 //kol i maziau uz desimt, tol vykdys salyga. pa
 // uzduotis: kas penkias sekundes turi atsirasti mano vardas ekrane.----------------------------------------------------------
 
         const bubble2 = document.querySelector('.bubble2');
+        let countName = 0;
         function showMyName() {
                 const myName = document.createElement('span')  //sukuriu nauja elementa span
                 myName.textContent = ' Giedre'                 //jam priskiriu teksta
                 bubble2.appendChild(myName)                    //nauja elementa priskiriu jau esanciam elementui
+                countName = countName + 1
+                if (countName === 5) {
+                        clearInterval(printMyName)
+                }
                
 
                 
