@@ -1,0 +1,17 @@
+
+body {
+    padding: 30px;
+    background-color: chocolate;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+}
+
+img {
+    margin-top: 20px;
+    width: 50%;
+    
+}
