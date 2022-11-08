@@ -1,0 +1,13 @@
+.circle-place {
+    height: 150px;
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+.circle {
+    height: 80px;
+    width: 80px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+
