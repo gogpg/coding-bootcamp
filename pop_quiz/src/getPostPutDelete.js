@@ -156,7 +156,37 @@ function editData() {
 }
 editData()
 
+//// DELETE request //----------------------------------------------------------------------------------------------
+// can delete all object
 
+// istrinti 27 id objekta is burgeriu API ---------------------------
+
+// fetch('', {                                 ///sintakse
+//         method: 'DELETE',
+//     })
+//     .then((response) => response.json())
+//     .then((data1) => {
+//         console.log('Success:', data1)
+        
+//     })
+//     .catch((error) => {
+//         console.log('Error:', error)
+//     })
+
+// fetch('https://my-burger-api.herokuapp.com/burgers/27', {             ///ikeliu nuoroda su to, kuri noriu istrinti objekto id
+// method: 'DELETE'
+// })
+
+function remove(id) {
+fetch('https://my-burger-api.herokuapp.com/burgers/' + id, {
+  method: 'DELETE',
+})
+.then(res => {
+  return res.json()
+}) 
+.then(data => console.log(data))
+}
+remove(25)
 
 
 
