@@ -89,7 +89,72 @@ fetch('https://my-burger-api.herokuapp.com/burgers', {
 
 /// PUT request
 /// Allows to edit object ///////////////////////////////////////////////////////////------------
+// sintakse
 
+// fetch('', {
+//     method: 'PUT',
+//     headers: {
+//         'Content-type': 'application/json'
+//     },
+//     body: JSON.stringify(data),
+// })
+// .then((response) => response.json())
+// .then((data) => {
+//     console.log('Success:', data)
+    
+// })
+// .catch((error) => {
+//     console.log('Error:', error)
+// })
+
+// uzduotis redaguoti API objekta----------------------------------------------------------------------
+// https://my-burger-api.herokuapp.com/burgers/3  gale pridejus reikiamo objekto id gausiu tik viena objekta, kurio man reikia pagal id
+
+const data1 = {
+    "id": 3,
+    "name": "The Good Burger",
+    "restaurant": "Good Burger",
+    "web": "https://en.wikipedia.org/wiki/Good_Burger",
+    "description": "Welcome to Good Burger, home of the Good Burger, can I take your order?",
+    "ingredients": [
+      "bun",
+      "tomato",
+      "Ed's secret sauce",
+      "lettuce",
+      "onions",
+      "cheese"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "123",   //pakeiciau numeri is 000 i 123
+        "line1": "Good Burger",
+        "line2": "437 Glendora Ave.",
+        "postcode": "CA",
+        "country": "United States"
+      }
+    ]
+  }
+  
+function editData() {
+
+    fetch('https://my-burger-api.herokuapp.com/burgers/3', {     ///adresa rasau su id objekto, kuri editinu.
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(data1),
+    })
+    .then((response) => response.json())
+    .then((data1) => {
+        console.log('Success:', data1)
+        
+    })
+    .catch((error) => {
+        console.log('Error:', error)
+    })
+}
+editData()
 
 
 
